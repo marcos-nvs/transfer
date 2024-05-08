@@ -1,19 +1,13 @@
 package com.globalit.transfer.controller;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import com.globalit.transfer.dtos.SchedullerDto;
 import com.globalit.transfer.service.SchedullerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/schedullers")

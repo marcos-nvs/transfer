@@ -11,9 +11,6 @@ import com.globalit.transfer.repositories.CustomerRepository;
 import com.globalit.transfer.repositories.SchedullerAgendRepository;
 import com.globalit.transfer.repositories.TaxRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -21,7 +18,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
