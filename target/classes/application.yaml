@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /services/transfer
+
+spring:
+  application:
+    name: transfer
+  datasource:
+    url: jdbc:h2:mem:tranfer
+    driverClassName: org.h2.Driver
+    username: sa
+    password: tranfer12345
+    jpa:
+      data-platform: org.hibernate.dialect.H2Dialect
+      show-sql: false
+      hibernate:
+        ddl-auto: update
+
+
