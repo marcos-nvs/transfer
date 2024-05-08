@@ -20,7 +20,7 @@ public class Tax {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "taxid", nullable = false)
-    private UUID taxId;
+    private Long taxId;
 
     @Column(name = "datein", nullable = false)
     private Integer dateIn;

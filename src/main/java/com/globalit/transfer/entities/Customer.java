@@ -19,7 +19,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "customerid", nullable = false)
-    private UUID customerId;
+    private Long customerId;
 
     @Column(name = "name", length = 50, nullable = false)
     private String name;

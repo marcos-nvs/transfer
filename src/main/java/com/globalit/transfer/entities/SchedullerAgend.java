@@ -1,6 +1,7 @@
 package com.globalit.transfer.entities;
 
 
+import com.globalit.transfer.enums.SchedullerStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,10 +9,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
-import java.util.BitSet;
-import java.util.UUID;
 
 @Entity
 @Table(name = "schedulleragend")
@@ -24,7 +23,7 @@ public class SchedullerAgend {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private UUID id;
+    private Long id;
 
     @Column(name = "originaccount", length = 30, nullable = false)
     private String origingAccount;
@@ -39,13 +38,16 @@ public class SchedullerAgend {
     private BigDecimal rate;
 
     @Column(name = "datatransfer", nullable = false)
-    private ZonedDateTime dataTransfer;
+    private LocalDate dataTransfer;
 
     @Column(name = "datatoday", nullable = false)
-    private ZonedDateTime dateToday;
+    private LocalDateTime dateToday;
+
+    @Column(name = "status", nullable = false)
+    private SchedullerStatus status;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "customerId", referencedColumnName = "customerId", nullable = false)
+    @JoinColumn(name = "customerid", referencedColumnName = "customerid", nullable = false)
     private Customer customer;
 
 }
